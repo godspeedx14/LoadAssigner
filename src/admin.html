@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assigned Table</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      /* for loading */
+      .page {
+        display: none;
+      }
+
+      #settingbtn {
+        display: none;
+      }
+
+      #settingDIV {
+        display: none;
+      }
+
+      
+
+      #loading {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100vw;
+        height: 100vh;
+        background-color: #E4F0F1;
+        /* background-image: url("https://cdn.dribbble.com/users/885937/screenshots/2939772/__-1_1.gif"); */
+        background-image: url("https://media3.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif?cid=ecf05e476xw6b98qbpg98kvcrgv68dkd67qbjculzx7ycf30&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+        background-repeat: no-repeat;
+        /* background-blend-mode: difference; */
+        /* background-color: revert-layer; */
+        background-position: center;
+      }
+    </style>
+    <style>
+      #dataDIV {
+        display: none;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        margin-bottom: -80px;
+        margin-top: 100px;
+      }
+
+      #myTable5 {
+        margin-bottom: 100px;
+      }
+
+      h2 {
+        font-size: 30px;
+        margin: 10px;
+      }
+      table {
+        /* border-collapse: collapse; */
+        /* width: 60%; */
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        /* text-align: center; */
+        /* border: 1px rgb(0, 0, 0); */
+      }
+
+      th,
+      td {
+        padding: 8px;
+        /* text-align: left; */
+        /* border: 1px ridge #ffffff; */
+        /* border-radius: 3px; */
+        background-color: white;
+      }
+
+      td {
+        width: 80%;
+      }
+
+      th {
+        background-color: #36304a;
+        color: white;
+        /* border: 1px solid; */
+      }
+
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+    </style>
+
+
+<style>
+     .find{
+        /* background-color: rgb(247, 247, 247); */
+        text-align: center;
+        font-size: 30px;
+      }
+</style>
+
+<style>
+  /*for navbar */
+  /* Header and Navigation */
+.header {
+  padding: 45px 0;
+}
+
+.header .logo img {
+  height: 30px;
+}
+
+.header .main-navigation {
+  flex: 1;
+  gap: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .nav-links,
+.header .nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header .nav-buttons .btn {
+  color: #fff;
+  width: 80%;
+}
+
+.main-navigation a {
+  font-weight: 700;
+  font-size: 14px;
+  color: #9e9aa7;
+  transition: 0.3s;
+}
+
+.main-navigation a:hover {
+  color: #232127;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Containers */
+.container {
+  position: relative;
+  width: 78%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: #3a5afd;
+  text-transform: capitalize;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.btn.btn-sm {
+  padding: 7px 21px;
+}
+
+.btn.btn-lg {
+  padding: 12px 36px;
+}
+
+.btn.btn-primary {
+  background-color: #3a5afd;
+  color: #fff;
+}
+
+.btn.btn-secondary {
+  background-color: #f0f0f0;
+  color: #3a5afd;
+}
+
+.btn:hover {
+  background-color: rgb(0, 17, 255);
+}
+</style>
+
+    <script type="module" src="import.js"></script>
+  </head>
+
+
+  <body>
+    
+    <div class="page">
+      <!-- <video autoplay muted loop id="myVideo">
+        <source
+          src="https://cdn.dribbble.com/users/32512/screenshots/16139914/media/6adc84fc75ab6fbe931355460839010d.mp4"
+          type="video/mp4"
+          object-fit="none"
+          position="center"
+          0%
+        /> -->
+        <!-- https://cdn.dribbble.com/userupload/6815891/file/large-1b2389df5fec7d935162ec47122274b1.mp4 -->
+      <!-- </video> -->
+      <img
+        src="https://www.kiet.edu/assets/frontend/img/logo.png"
+        class="logo"
+        alt="kiet logo"
+      />
+
+      <div id="logout" class="logoutButton">
+        <a href="/"
+          ><div>
+            <img
+              src="https://img.icons8.com/?size=512&id=80689&format=png"
+              class="loginImg"
+            /></div></a>
+      </div>
+      <div id="settingbtn" class="logoutButton">
+        <div>
+            <img
+              src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Settings-icon.png"
+              class="loginImg"
+            /></div
+        >
+      </div>
+
+      <div id="credDIV">
+        <form>
+          <h2>Admin Access</h2>
+          <br />
+
+          <label>
+            <!-- <p class="label-txt">hello</p> -->
+            <input
+              type="text"
+              placeholder="USERNAME"
+              class="input"
+              name="name"
+              id="ex1"
+              required
+            />
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+
+          <!-- <p class="label-txt">manas</p> -->
+          <label>
+            <input
+              type="password"
+              placeholder="PASSWORD"
+              class="input"
+              name="email"
+              id="ex2"
+              required
+            />
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+
+          <button type="button" id="adminbtn1">
+            <!-- <img
+              src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg"
+              width="15px"
+              height="15px"
+            /> -->
+            Verify
+          </button>
+          <p id="error"></p>
+        </form>
+      </div>
+
+
+      <div id="settingDIV">
+        <form>
+          <h2>Edit settings</h2>
+          <br />
+      
+            <!-- <p class="label-txt">hello</p> -->
+          <p class="explabel">Enter admin passkey</p>
+          <label>
+            <input
+              type="text"
+              class="input"
+              name="adminpass"
+              id="adminpass"
+              value=0
+              required
+            />
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+
+
+             <!-- <p class="label-txt">hello</p> -->
+             <p class="explabel">number of time each teacher assigned</p>
+             <label>
+               <input
+                 type="number"
+                 class="input"
+                 name="eachteach"
+                 id="eachteach"
+                 value=0
+                 required
+               />
+               <div class="line-box">
+                 <div class="line"></div>
+               </div>
+             </label>
+
+                     <!-- <p class="label-txt">hello</p> -->
+              <p class="explabel">teacher in each Core subject</p>
+              <label>
+                <input
+                  type="number"
+                  class="input"
+                  name="teach"
+                  id="teach"
+                  value=0
+                  required
+                />
+                <div class="line-box">
+                  <div class="line"></div>
+                </div>
+              </label>
+
+          
+              <!-- <p class="label-txt">hello</p> -->
+              <p class="explabel">teacher in each Non core subject</p>
+              <label>
+                <input
+                  type="number"
+                  class="input"
+                  name="teach_s"
+                  id="teach_s"
+                  value=0
+                  required
+                />
+                <div class="line-box">
+                  <div class="line"></div>
+                </div>
+              </label>
+
+                          <!-- <p class="label-txt">hello</p> -->
+          <p class="explabel">Enter user passkey</p>
+          <label>
+            <input
+              type="text"
+              class="input"
+              name="userpass"
+              id="userpass"
+              value=0
+              required
+            />
+            <div class="line-box">
+              <div class="line"></div>
+            </div>
+          </label>
+
+<!-- subjects                    -->
+                          <!-- <p class="label-txt">hello</p> -->
+                          <p class="explabel">Subject 1</p>
+                          <label>
+                            <input
+                              type="text"
+                              class="input"
+                              name="subject1name"
+                              id="subject1name"
+                              value=0
+                              required
+                            />
+                            <div class="line-box">
+                              <div class="line"></div>
+                            </div>
+                          </label>
+                          
+                          <!-- <p class="label-txt">hello</p> -->
+                          <p class="explabel">Subject 2</p>
+                          <label>
+                            <input
+                              type="text"
+                              class="input"
+                              name="subject2name"
+                              id="subject2name"
+                              value=0
+                              required
+                            />
+                            <div class="line-box">
+                              <div class="line"></div>
+                            </div>
+                          </label>
+                          
+                          <!-- <p class="label-txt">hello</p> -->
+                          <p class="explabel">Subject 3</p>
+                          <label>
+                            <input
+                              type="text"
+                              class="input"
+                              name="subject3name"
+                              id="subject3name"
+                              value=0
+                              required
+                            />
+                            <div class="line-box">
+                              <div class="line"></div>
+                            </div>
+                          </label>
+                          
+                          <!-- <p class="label-txt">hello</p> -->
+                          <p class="explabel">Subject 4</p>
+                          <label>
+                            <input
+                              type="text"
+                              class="input"
+                              name="subject4name"
+                              id="subject4name"
+                              value=0
+                              required
+                            />
+                            <div class="line-box">
+                              <div class="line"></div>
+                            </div>
+                          </label>
+                          
+                          <!-- <p class="label-txt">hello</p> -->
+                          <p class="explabel">Subject 5 (non core) </p>
+                          <label>
+                            <input
+                              type="text"
+                              class="input"
+                              name="subject5name"
+                              id="subject5name"
+                              value=0
+                              required
+                            />
+                            <div class="line-box">
+                              <div class="line"></div>
+                            </div>
+                          </label>
+                
+          <button type="button" id="updbtn1">
+            <!-- <img
+              src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg"
+              width="15px"
+              height="15px"
+            /> -->
+            Update
+          </button>
+          <p id="error"></p>
+      </div>
+      
+
+      <div id="dataDIV">
+        <h1 id="DSA1">DSA</h1>
+
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Teachers</th>
+              <th>Subject score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h1 id="DSTL1">DSTL</h1>
+        <table id="myTable1">
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Teachers</th>
+              <th>Subject score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h1 id="SENSOR1">SENSOR</h1>
+        <table id="myTable2">
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Teachers</th>
+              <th>Subject score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h1 id="COA1">COA</h1>
+        <table id="myTable3">
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Teachers</th>
+              <th>Subject score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h1 id="CSS1">CSS</h1>
+        <table id="myTable4">
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Teachers</th>
+              <th>Subject score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <h1>Extra Teachers</h1>
+        <table id="myTable5">
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Teachers</th>
+              <th>Subject score</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+
+ 
+
+
+      </div>
+    </div>
+    <div id="loading"></div>
+
+    <script></script>
+
+    <script>
+      //for loading
+      function onReady(callback) {
+        var intervalId = window.setInterval(function () {
+          if (document.getElementsByTagName("body")[0] !== undefined) {
+            window.clearInterval(intervalId);
+            callback.call(this);
+          }
+        }, 1000);
+      }
+
+      function setVisible(selector, visible) {
+        document.querySelector(selector).style.display = visible
+          ? "block"
+          : "none";
+      }
+
+      onReady(function () {
+        setVisible(".page", true);
+        setVisible("#loading", false);
+      
+      });
+    </script>
+  </body>
+</html>

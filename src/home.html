@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preference sheet</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+    <style>
+    
+    #credDIV {display : none}
+      #myDIV1 {display : none}
+      #myDIV2 {display : none}
+      #myDIV3 {display : none}
+      #myDIV4 {display : none}
+      #myDIV5 {display : none}
+      </style> 
+      <style>
+      /* for loading */
+      .page {
+        display: none;
+      }
+
+       #loading {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100vw;
+        height: 100vh;
+        background-color: #E4F0F1;
+        /* background-image: url("https://cdn.dribbble.com/users/885937/screenshots/2939772/__-1_1.gif"); */
+        background-image: url("https://media3.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif?cid=ecf05e476xw6b98qbpg98kvcrgv68dkd67qbjculzx7ycf30&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+        background-repeat: no-repeat;
+        /* background-blend-mode: difference; */
+        /* background-color: revert-layer; */
+        background-position: center;
+      }
+
+      /* #myVideo {
+  margin-left: -50px;
+  margin-right: -50px;
+} */
+    </style>
+  </head>
+
+
+  <body>  <div class="page">
+    <!-- <video autoplay muted loop id="myVideo" style="margin-bottom: -20%;">
+      <source
+        src="https://cdn.dribbble.com/users/156849/screenshots/15544041/media/f30faf230ce5eacd39f271e5b21fd97f.mp4"
+        type="video/mp4"
+      /> -->
+      <!-- https://cdn.dribbble.com/userupload/2671954/file/large-ab10dd3fa83429de0310fd2b1b405ef7.mp4#t=0,18 -->
+    <!-- </video> -->
+
+    <img src="https://www.kiet.edu/assets/frontend/img/logo.png" class="logo" alt="kiet logo" >
+  <div id="logout" class="logoutButton"><a href="/index.html"><div><img src="https://img.icons8.com/?size=512&id=80689&format=png" class= "loginImg"></div></a></div>
+  
+
+   <form method="post" id="frmSubmit">
+
+<div id="myDIV">
+
+<h1>Teachers Preference Form</h1>
+ <br>
+ 
+      <!-- <label> -->
+        <!-- <p class="label-txt">hello</p> -->
+        <!-- <input
+          type="text"
+          placeholder="ENTER YOUR NAME"
+          class="input"
+          name="name"
+          required
+        />
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label> -->
+
+      <!-- <p class="label-txt">manas</p> -->
+      <!-- <label>
+        <input
+          type="text"
+          placeholder="ENTER YOUR EMAIL"
+          class="input"
+          name="email"
+          required
+        />
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+      
+    <button type="button" onclick="myFunction()">Next</button> -->
+    
+    <button type="button" id="login" >
+      <!-- <img src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg" width="15px" height="15px" > -->
+       Login with Google </button>
+
+    
+</div> 
+
+
+
+<div id="credDIV">
+  <form>
+    <h2>Credentials</h2>
+    <br />
+
+    <label>
+      <!-- <p class="label-txt">hello</p> -->
+      <input
+        type="text"
+        placeholder="DEPARTMENT CODE(for ex- kietcsit2)"
+        class="input"
+        name="name"
+        id="clgcode"
+        required
+      />
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+
+    <!-- <p class="label-txt">manas</p> -->
+    <label>
+      <input
+        type="password"
+        placeholder="USER PASSWORD(ask admin for it)"
+        class="input"
+        name="email"
+        id="userpass"
+        required
+      />
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+
+    <p class="explabel">Enter Teaching experince in years</p>
+    <label>
+      <input
+        type="number"
+        class="input"
+        name="teachexper"
+        id="teachexper"
+        value=0
+        required
+      />
+      <div class="line-box">
+        <div class="line"></div>
+      </div>
+    </label>
+    
+
+    <button type="button" id="userbtn1">
+      <!-- <img
+        src="https://cdn.cdnlogo.com/logos/g/35/google-icon.svg"
+        width="15px"
+        height="15px"
+      /> -->
+      Verify
+    </button>
+    <p id="error"></p>
+</div>
+
+<div id="myDIV1">
+
+ <h1>Preference 1</h1>
+
+ 
+      <label>
+        <p class="label-txt">Preference 1</p>
+        <select class="dropdown" name="Preference 1" id="pre1" required />
+                <!-- <option>Select A Subject</option> -->
+        <option value="DSA">DSA</option>
+        <option value="CSS">CSS</option>
+        <option value="DSTL">DSTL</option>
+        <option value="SENSOR">SENSOR</option>
+         <option value="COA">COA</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+
+ <br>
+
+      <label>
+        <p class="label-txt">EXPEREINCE IN SUBJECT</p>
+        <select class="dropdown" name="expereince for 1" id="ex1" required />
+         <!-- <option>Expereince</option> -->
+        <option value="0">0 YEARS</option>
+        <option value="1">1 YEARS</option>
+        <option value="2">2 YEARS</option>
+        <option value="3">3 YEARS</option>
+        <option value="4">3+ YEARS</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+      <label>
+        <p class="label-txt">LAST CLASS SCORE(IN THIS SUBJECT)</p>
+        <select class="dropdown" name="lastbatchscore for 1" id="lc1" required />
+        <!-- <option><b>Score</b></option> -->
+        <option value="0">below 60</option>
+        <option value="1">60%-70%</option>
+        <option value="2">70%-80%</option>
+        <option value="3">80%-90%</option>
+        <option value="4">90%+</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+      <label>
+        <p class="label-txt">Education</p>
+        <select class="dropdown" name="Education for 1" id="ed1" required />
+        <!-- <option>Highest Degree</option> -->
+        <option value="0">None</option>
+        <option value="1">Intermediate</option>
+        <option value="2">Bachellors</option>
+        <option value="3">Masters</option>
+        <option value="4">PHD</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+     
+    <button type="button" onclick="myFunction1()">Next</button>
+
+</div>
+
+
+  
+
+<div id="myDIV2">
+
+ <h1>Preference 2</h1>
+
+ 
+      <label>
+        <p class="label-txt">Preference 2</p>
+        <select class="dropdown" name="Preference 2"  id="pre2"  required />
+                <!-- <option>Select A Subject</option> -->
+        <option value="DSA">DSA</option>
+        <option value="CSS">CSS</option>
+        <option value="DSTL">DSTL</option>
+        <option value="SENSOR">SENSOR</option>
+         <option value="COA">COA</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+
+ <br>
+
+      <label>
+        <p class="label-txt">EXPEREINCE IN SUBJECT</p>
+        <select class="dropdown" name="expereince for 2" id="ex2" required />
+         <!-- <option>Expereince</option> -->
+        <option value="0">0 YEARS</option>
+        <option value="1">1 YEARS</option>
+        <option value="2">2 YEARS</option>
+        <option value="3">3 YEARS</option>
+        <option value="4">3+ YEARS</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+      <label>
+        <p class="label-txt">LAST CLASS SCORE(IN THIS SUBJECT)</p>
+        <select class="dropdown" name="lastbatchscore for 2" id="lc2" required />
+        <!-- <option><b>Score</b></option> -->
+        <option value="0">below 60</option>
+        <option value="1">60%-70%</option>
+        <option value="2">70%-80%</option>
+        <option value="3">80%-90%</option>
+        <option value="4">90%+</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+      <label>
+        <p class="label-txt">Education</p>
+        <select class="dropdown" name="Education for 2" id="ed2" required />
+        <!-- <option>Highest Degree</option> -->
+        <option value="0">None</option>
+        <option value="1">Intermediate</option>
+        <option value="2">Bachellors</option>
+        <option value="3">Masters</option>
+        <option value="4">PHD</option>
+        </select>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+      </label>
+
+
+      
+    <button type="button" onclick="myFunction2()">Next</button>
+</div>
+
+
+
+
+
+<div id="myDIV3">
+
+  <h1>Preference 3</h1>
+ 
+  
+       <label>
+         <p class="label-txt">Preference 3</p>
+         <select class="dropdown" name="Preference 3"  id="pre3"  required />
+                 <!-- <option>Select A Subject</option> -->
+         <option value="DSA">DSA</option>
+         <option value="CSS">CSS</option>
+         <option value="DSTL">DSTL</option>
+         <option value="SENSOR">SENSOR</option>
+         <option value="COA">COA</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+ 
+  <br>
+ 
+       <label>
+         <p class="label-txt">EXPEREINCE IN SUBJECT</p>
+         <select class="dropdown" name="expereince for 3" id="ex3" required />
+          <!-- <option>Expereince</option> -->
+         <option value="0">0 YEARS</option>
+         <option value="1">1 YEARS</option>
+         <option value="2">2 YEARS</option>
+         <option value="3">3 YEARS</option>
+         <option value="4">3+ YEARS</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+       <label>
+         <p class="label-txt">LAST CLASS SCORE(IN THIS SUBJECT)</p>
+         <select class="dropdown" name="lastbatchscore for 3" id="lc3" required />
+         <!-- <option><b>Score</b></option> -->
+         <option value="0">below 60</option>
+         <option value="1">60%-70%</option>
+         <option value="2">70%-80%</option>
+         <option value="3">80%-90%</option>
+         <option value="4">90%+</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+       <label>
+         <p class="label-txt">Education</p>
+         <select class="dropdown" name="Education for 3" id="ed3" required />
+         <!-- <option>Highest Degree</option> -->
+         <option value="0">None</option>
+         <option value="1">Intermediate</option>
+         <option value="2">Bachellors</option>
+         <option value="3">Masters</option>
+         <option value="4">PHD</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+ 
+       
+     <button type="button" onclick="myFunction3()">Next</button>
+ </div>
+
+
+
+
+ <div id="myDIV4">
+
+  <h1>Preference 4</h1>
+ 
+  
+       <label>
+         <p class="label-txt">Preference 4</p>
+         <select class="dropdown" name="Preference 4"  id="pre4"  required />
+                 <!-- <option>Select A Subject</option> -->
+         <option value="DSA">DSA</option>
+         <option value="CSS">CSS</option>
+         <option value="DSTL">DSTL</option>
+         <option value="SENSOR">SENSOR</option>
+         <option value="COA">COA</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+ 
+  <br>
+ 
+       <label>
+         <p class="label-txt">EXPEREINCE IN SUBJECT</p>
+         <select class="dropdown" name="expereince for 4" id="ex4" required />
+          <!-- <option>Expereince</option> -->
+         <option value="0">0 YEARS</option>
+         <option value="1">1 YEARS</option>
+         <option value="2">2 YEARS</option>
+         <option value="3">3 YEARS</option>
+         <option value="4">3+ YEARS</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+       <label>
+         <p class="label-txt">LAST CLASS SCORE(IN THIS SUBJECT)</p>
+         <select class="dropdown" name="lastbatchscore for 4" id="lc4" required />
+         <!-- <option><b>Score</b></option> -->
+         <option value="0">below 60</option>
+         <option value="1">60%-70%</option>
+         <option value="2">70%-80%</option>
+         <option value="3">80%-90%</option>
+         <option value="4">90%+</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+       <label>
+         <p class="label-txt">Education</p>
+         <select class="dropdown" name="Education for 4" id="ed4" required />
+         <!-- <option>Highest Degree</option> -->
+         <option value="0">None</option>
+         <option value="1">Intermediate</option>
+         <option value="2">Bachellors</option>
+         <option value="3">Masters</option>
+         <option value="4">PHD</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+ 
+       
+     <button type="button" onclick="myFunction4()">Next</button>
+ </div>
+
+
+
+
+
+ <div id="myDIV5">
+
+  <h1>Preference 5</h1>
+ 
+  
+       <label>
+         <p class="label-txt">Preference 5</p>
+         <select class="dropdown" name="Preference 5"  id="pre5" required />
+                 <!-- <option>Select A Subject</option> -->
+         <option value="DSA">DSA</option>
+         <option value="CSS">CSS</option>
+         <option value="DSTL">DSTL</option>
+         <option value="SENSOR">SENSOR</option>
+         <option value="COA">COA</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+ 
+  <br>
+ 
+       <label>
+         <p class="label-txt">EXPEREINCE IN SUBJECT</p>
+         <select class="dropdown" name="expereince for 5" id="ex5" required />
+          <!-- <option>Expereince</option> -->
+         <option value="0">0 YEARS</option>
+         <option value="1">1 YEARS</option>
+         <option value="2">2 YEARS</option>
+         <option value="3">3 YEARS</option>
+         <option value="4">3+ YEARS</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+       <label>
+         <p class="label-txt">LAST CLASS SCORE(IN THIS SUBJECT)</p>
+         <select class="dropdown" name="lastbatchscore for 5" id="lc5" required />
+         <!-- <option><b>Score</b></option> -->
+         <option value="0">below 60</option>
+         <option value="1">60%-70%</option>
+         <option value="2">70%-80%</option>
+         <option value="3">80%-90%</option>
+         <option value="4">90%+</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+ 
+       <label>
+         <p class="label-txt">Education</p>
+         <select class="dropdown" name="Education for 5" id="ed5" required />
+         <!-- <option>Highest Degree</option> -->
+         <option value="0">None</option>
+         <option value="1">Intermediate</option>
+         <option value="2">Bachellors</option>
+         <option value="3">Masters</option>
+         <option value="4">PHD</option>
+         </select>
+         <div class="line-box">
+           <div class="line"></div>
+         </div>
+       </label>
+
+
+      
+      <input type="text" id="name" class="hidden" name="name" >
+      <input type="text" id="email" class="hidden" name="email" >
+
+      <input type="text" id="demo1" class="hidden" name="score1" >
+      <input type="text" id="demo2" class="hidden" name="score2" >
+      <input type="text" id="demo3" class="hidden" name="score3" >
+      <input type="text" id="demo4" class="hidden" name="score4" >
+      <input type="text" id="demo5" class="hidden" name="score5" >
+      <!-- <p id="demo"></p> -->
+      
+      <button type="submit" id="btnSubmit" onclick="scoreFunction()">submit</button>
+      <div id="msg"></div>
+    </div>
+
+    </form>
+
+
+<div class="note">
+          <p><b>Note -</b> Once you lock your preference you can't change it for next 3 semesters</p>
+ </div>
+ 
+ 
+</div>
+<div id="loading"></div>
+
+ <script>
+  //for loading
+  function onReady(callback) {
+    var intervalId = window.setInterval(function () {
+      if (document.getElementsByTagName("body")[0] !== undefined) {
+        window.clearInterval(intervalId);
+        callback.call(this);
+      }
+    }, 1000);
+  }
+
+  function setVisible(selector, visible) {
+    document.querySelector(selector).style.display = visible
+      ? "block"
+      : "none";
+  }
+
+  onReady(function () {
+    setVisible(".page", true);
+    setVisible("#loading", false);
+  });
+</script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="scriptscore.js"></script>
+    <script type="module" src="firebaselogin.js" ></script> 
+    <script type="module" src="importtofirebase.js"></script>
+    <!-- <script type="module" src="importToFirebase.js" ></script>  -->
+
+   </body>
+</html>

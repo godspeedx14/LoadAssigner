@@ -1,0 +1,207 @@
+@media only screen and (min-width: 600px) {
+  /* For web view: */
+  form {
+    width: 400px;
+  }
+}
+
+body {
+  background: rgb(82, 82, 82);
+  /* background: #003149; */
+  /* background-image: url("https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif"); */
+
+  /* background-color: revert-layer; */
+  background-repeat: repeat;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+} */
+
+h1,
+h2 {
+  color: #272727;
+}
+
+.logo {
+  /* border: 1px solid #ddd; */
+  border-radius: 4px;
+  padding: 5px;
+  margin: 10px;
+  width: 220px;
+  height: 60px;
+}
+
+.loginImg {
+  width: 45px;
+  border-radius: 56px;
+  float: right;
+  padding: 18px;
+}
+
+.loginImg:hover {
+  transition: transform 600s ease-in-out;
+  transform: rotate(60000000deg);
+}
+
+form {
+  max-width: 400px;
+  /* width: 80vw; */
+  /* margin: 60px auto; */
+  background: white;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 60px 120px 80px 120px;
+  text-align: center;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 1.1);
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  form {
+    margin-top: 10%;
+    width: 90vw;
+    padding: 50px 10px 50px 10px;
+  }
+}
+
+label {
+  display: block;
+  position: relative;
+  margin: 40px 0px;
+}
+
+.explabel {
+  text-align: left;
+  margin-bottom: -40px;
+}
+
+.label-txt {
+  position: absolute;
+  top: -1.6em;
+  padding: 10px;
+  /* lastly added */
+  padding-top: 1.5em;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  color: rgb(20, 20, 20);
+  transition: ease 0.3s;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  text-align-last: right;
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  /* border: none; */
+  outline: none;
+  border-color: #bcbcbc;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  color: rgb(120, 120, 120);
+  transition: ease 0.3s;
+}
+
+.dropdown-items {
+  border: 1px solid transparent;
+  background-color: black;
+}
+
+.line-box {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: #bcbcbc;
+}
+
+.line {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #8bc34a;
+  transition: ease 0.6s;
+}
+
+.input:focus + .line-box .line {
+  width: 100%;
+}
+
+.label-active {
+  top: -3em;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: rgb(220, 220, 220);
+  font-weight: bold;
+  color: rgb(120, 120, 120);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+button:hover {
+  background: #8bc34a;
+  color: #ffffff;
+}
+#msg {
+  color: rgb(57, 0, 95);
+}
+
+.note {
+  color: rgb(185, 185, 185);
+  /* float: right; */
+  position: fixed;
+  bottom: 0px;
+}
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .note {
+    /* float: right; */
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.logoutButton {
+  /* background-color: #002333; */
+  border-radius: 36px;
+  width: 65px;
+  height: 65px;
+  float: right;
+}
+
+.logoutButton:hover {
+  /* background-color: #002333; */
+}
+
+.logout {
+  color: #ffffff;
+}
