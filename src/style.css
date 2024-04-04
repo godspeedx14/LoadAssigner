@@ -157,9 +157,9 @@ label {
 button {
   display: inline-block;
   padding: 12px 24px;
-  background: rgb(220, 220, 220);
+  background: #6c0086;
   font-weight: bold;
-  color: rgb(120, 120, 120);
+  color: #fff;
   border: none;
   outline: none;
   border-radius: 3px;
@@ -168,7 +168,7 @@ button {
 }
 
 button:hover {
-  background: #8bc34a;
+  background: #2e003a;
   color: #ffffff;
 }
 #msg {
