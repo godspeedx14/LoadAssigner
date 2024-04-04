@@ -6,9 +6,10 @@
 }
 
 body {
-  background: rgb(82, 82, 82);
+  /* background: #fff; */
+  /* background: rgb(82, 82, 82); */
   /* background: #003149; */
-  /* background-image: url("https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif"); */
+  background-image: url("https://cdn.dribbble.com/users/507150/screenshots/5380757/media/de2a1b1bafe3c7693b7f98362c933e66.gif");
 
   /* background-color: revert-layer; */
   background-repeat: repeat;
@@ -33,9 +34,10 @@ h2 {
   /* border: 1px solid #ddd; */
   border-radius: 4px;
   padding: 5px;
-  margin: 10px;
-  width: 220px;
+  /* margin: -10px; */
+  /* width: 220px; */
   height: 60px;
+  background-color: #f2f2f2;
 }
 
 .loginImg {
@@ -43,6 +45,7 @@ h2 {
   border-radius: 56px;
   float: right;
   padding: 18px;
+  margin-top: -70px;
 }
 
 .loginImg:hover {
@@ -54,7 +57,8 @@ form {
   max-width: 400px;
   /* width: 80vw; */
   /* margin: 60px auto; */
-  background: white;
+  /* background: white; */
+  background: #f2f2f2;
   margin: 0 auto;
   margin-top: 100px;
   padding: 60px 120px 80px 120px;
