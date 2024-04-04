@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "subjectallocater",
     "public": "src",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
