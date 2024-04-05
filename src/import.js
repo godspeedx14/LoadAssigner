@@ -107,7 +107,7 @@ function valid() {
           Preference: 2,
         })
           .then(() => {
-            alert("Data addeteachersd successfully");
+            alert("Data addedteachers successfully");
           })
           .catch((error) => {
             alert(error);
