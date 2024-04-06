@@ -1,3 +1,4 @@
+//part of the code that sends data to google sheets("Proffessor") on my id , it compare the name feild in html and then put the value in that row.
 jQuery("#frmSubmit").on("submit", function (e) {
   e.preventDefault();
   jQuery("#msg").html("Please wait...");
@@ -14,6 +15,7 @@ jQuery("#frmSubmit").on("submit", function (e) {
     },
   });
 });
+//till here.
 
 // document.getElementById("myDIV1").style.display = "none";
 // document.getElementById("myDIV2").style.display = "none";
