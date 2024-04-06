@@ -43,8 +43,8 @@ var db = getDatabase();
 var enterSub = document.querySelector("#enterSub");
 var enterName = document.querySelector("#enterName");
 var enterScore = document.querySelector("#enterScore");
-var insertBtn = document.querySelector("#insert");
-var findBtn = document.querySelector("#find");
+// var insertBtn = document.querySelector("#insert");
+// var findBtn = document.querySelector("#find");
 
 //for admin verification
 var adminbtn1 = document.querySelector("#adminbtn1");

@@ -40,7 +40,7 @@
     </style>
     <style>
       #dataDIV {
-        display: none;
+        /* display: none; */
       }
 
       h1 {
@@ -92,7 +92,42 @@
         background-color: #f5f5f5;
       }
     </style>
+<!-- claude update table -->
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Roboto', sans-serif;
+}
 
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+  font-weight: 700;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e6e6e6;
+  transition: background-color 0.3s ease;
+}
+
+table {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  overflow: hidden;
+}
+</style>
+<!-- till here claude update table -->
 
 <style>
      .find{
@@ -473,8 +508,11 @@
       
 
       <div id="dataDIV">
-        <h1 id="DSA1">DSA</h1>
 
+        <div class="table-container">
+          
+        <div class="table-group">
+        <h1 id="DSA1">Subject1</h1>
         <table id="myTable">
           <thead>
             <tr>
@@ -485,8 +523,10 @@
           </thead>
           <tbody></tbody>
         </table>
+        </div>
 
-        <h1 id="DSTL1">DSTL</h1>
+        <div class="table-group">
+        <h1 id="DSTL1">Subject2</h1>
         <table id="myTable1">
           <thead>
             <tr>
@@ -497,8 +537,10 @@
           </thead>
           <tbody></tbody>
         </table>
+        </div>
 
-        <h1 id="SENSOR1">SENSOR</h1>
+        <div class="table-group">
+        <h1 id="SENSOR1">Subject3</h1>
         <table id="myTable2">
           <thead>
             <tr>
@@ -509,8 +551,10 @@
           </thead>
           <tbody></tbody>
         </table>
+        </div>
 
-        <h1 id="COA1">COA</h1>
+        <div class="table-group">
+        <h1 id="COA1">Subject4</h1>
         <table id="myTable3">
           <thead>
             <tr>
@@ -521,8 +565,10 @@
           </thead>
           <tbody></tbody>
         </table>
+        </div>
 
-        <h1 id="CSS1">CSS</h1>
+        <div class="table-group">
+        <h1 id="CSS1">Subject5</h1>
         <table id="myTable4">
           <thead>
             <tr>
@@ -533,7 +579,9 @@
           </thead>
           <tbody></tbody>
         </table>
+        </div>
 
+        <div class="table-group">
         <h1>Extra Teachers</h1>
         <table id="myTable5">
           <thead>
@@ -545,8 +593,10 @@
           </thead>
           <tbody></tbody>
         </table>
+        </div>
 
-
+</div> 
+<!-- //till here table conntainer -->
  
 
 
@@ -577,7 +627,7 @@
       
       });
     </script>
-    <!-- //for updating subject to teachers. -->
+    //for updating subject to teachers.
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
       type="text/javascript"
